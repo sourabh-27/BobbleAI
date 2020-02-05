@@ -12,7 +12,7 @@ typedef long long int ll; //shortcut to use long long int
 struct values{
     string name; //to store the name
     ll same_Word_Count; //to store the number of letters that are actually similar
-    ll size_Difference; //to store the size difference in input and given string 
+    ll size_Difference; //to store the size difference in input and given string
     ll frequency; //to store the given frequency
 };
 
@@ -44,7 +44,7 @@ bool sortingCompare(values a, values b) //compare function to sort the array
             }
             else
             {
-                return false; 
+                return false;
             }
         }
     }
@@ -87,7 +87,7 @@ vector<pair<string, ll>> readRecord()
             }
         }
     }
-     return vec; //returning the vector 
+     return vec; //returning the vector
 }
 
 int main()
@@ -96,8 +96,7 @@ int main()
     vector<pair<string, ll>> read_Name_And_Frequency = readRecord(); //to read the CSV file
     string input_String;
     cin >> input_String; //getting the input from the user
-    ll input_Length = input_String.length(); //length of input string 
-    input_String[0] = toupper(input_String[0]); //changing first letter of input string to upper case
+    ll input_Length = input_String.length(); //length of input string
     struct values arr[read_Name_And_Frequency.size() + 2];
 
     for(ll i = 0; i < read_Name_And_Frequency.size(); i++)
@@ -107,7 +106,7 @@ int main()
         ll count_Similar_Words = 0;
         for(ll j = 0; j < arr[i].name.length(); j++) //to count no. of similar words
         {
-            if(input_String[j] == arr[i].name[j])
+            if(input_String[j] == arr[i].name[j] || input_String[j] - arr[i].name[j] == 32)
             {
                 count_Similar_Words++;
             }
