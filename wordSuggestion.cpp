@@ -119,7 +119,7 @@ int main()
     for(ll i = 0; i < 5; i++)
     {
         cout << arr[i].name;
-        if(i == 5)
+        if(i == 4)
         {
             break;
         }
