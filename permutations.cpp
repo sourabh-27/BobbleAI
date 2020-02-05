@@ -64,3 +64,10 @@ int main()
     }
     return 0;
 }
+
+/*Here we simply need to print all the permutations possible.
+So we first take the input in a vector of strings. Now we call the function to find the permutation
+The function permuatation simply adds one character of the string and then calls the function recursively to generate
+all the other strings that are possible. The base case is when there are no more characters to add from a row, we simply return.
+Also we maintain a previous String so when the recursive function return we can call the function for other indexs removing the 
+previous index. */
